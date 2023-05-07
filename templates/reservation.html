@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservation</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Reserve a Seat</h1>
+    <h2>Seating Chart</h2>
+    {% include 'seating_chart.html' %}
+    <form action="{{ url_for('reserve') }}" method="post">
+      <label for="first_name">First Name</label>
+      <input type="text" name="first_name" required />
+      <label for="last_name">Last Name</label>
+      <input type="text" name="last_name" required />
+      <label for="row">Seat Row (0-11)</label>
+      <input type="number" name="row" min="0" max="11" required />
+      <label for="column">Seat Column (0-3)</label>
+      <input type="number" name="column" min="0" max="3" required />
+      <button type="submit">Reserve</button>
+    </form>
+    <a href="{{ url_for('home') }}">Back to main menu</a>
+  </body>
+</html>

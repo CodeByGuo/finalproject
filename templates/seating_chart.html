@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block content %}
+
+<table>
+  <tr>
+    <th></th>
+    {% for column in range(4) %}
+    <th>{{ column }}</th>
+    {% endfor %}
+  </tr>
+  {% for row in range(12) %}
+  <tr>
+    <th>{{ row }}</th>
+    {% for column in range(4) %}
+    <td>
+      {% if seating_chart[row][column] %}
+      <div class="seat reserved">{{ seating_chart[row][column] }}</div>
+      {% else %}
+      <div class="seat">
+        R{{ row }}C{{ column }} - ${{ cost_matrix[row][column] }}
+      </div>
+      {% endif %}
+    </td>
+    {% endfor %}
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,146 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7e0b3;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.seat {
+    background-color: orange;
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid black;
+}
+
+.reserved {
+    background-color: lightgray;
+}
+
+.form {
+    margin-bottom: 20px;
+}
+
+.menu-link {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+h1 {
+    background-color: #f7e0b3;
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+    font-size: 2.5em;
+    border-bottom: 3px solid #333;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+nav a {
+    background-color: #f7e0b3;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #333;
+    border-radius: 20px;
+    margin-right: 20px;
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    background-color: #333;
+    color: #f7e0b3;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+label, input, button {
+    font-size: 1.2em;
+}
+
+input, button {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #333;
+    color: #f7e0b3;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+button:hover {
+    background-color: #f7e0b3;
+    color: #333;
+    border: 2px solid #333;
+}
+
+a {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Seating Chart */
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    width: 80%;
+}
+
+th, td {
+    border: 1px solid #333;
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+}
+
+th {
+    font-weight: bold;
+}
+
+th, td:first-child {
+    background-color: #f7e0b3;
+}
+.seat.reserved {
+    background-color: #999;
+    color: #fff;
+}
